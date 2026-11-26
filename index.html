@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RKB Collection Manager · Tu Rekordbox en orden antes de cada fecha</title>
+<meta name="description" content="App gratuita para Mac y Windows que ordena tu colección de Rekordbox: listas de temas, calidad real del audio, duplicados, metadata, My Tags y backups. Hecha por un DJ para DJs.">
+<meta name="theme-color" content="#F5A524">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="RKB Collection Manager">
+<meta property="og:description" content="Tu Rekordbox en orden antes de cada fecha. Gratis, para Mac y Windows.">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icono-180.png">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<link rel="stylesheet" href="estilos.css">
+<script src="sitio.js" defer></script>
+</head>
+<body>
+<a class="saltar" href="#que-hace">Ir al contenido</a>
+
+<header class="hero">
+  <nav class="barra envoltura" aria-label="Principal">
+    <a class="marca" href="#" aria-label="RKB Collection Manager, inicio">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg>
+      <span><b>RKB</b> Collection Manager</span>
+    </a>
+    <div class="barra-links">
+      <a href="#que-hace">Qué hace</a>
+      <a href="#confianza">Tu biblioteca</a>
+      <a href="#instalar">Instalación</a>
+      <a href="#preguntas">Preguntas</a>
+    </div>
+  </nav>
+
+  <div class="hero-texto envoltura">
+    <p class="placa-dato">Beta <span data-version>0.8</span> <i></i> Mac y Windows <i></i> Gratis</p>
+    <h1>Tu Rekordbox en orden antes de cada fecha.</h1>
+    <p class="bajada">Soy Guido, KRAMER DJ. Armé esta app para preparar mis propios eventos: cruzar la lista del cliente con mi colección, revisar la calidad de lo que bajo, sacar duplicados y llegar con todo en su lugar. Ahora la comparto con colegas.</p>
+    <div class="acciones" data-descargas>
+      <a class="boton tinta" data-so="mac" href="https://github.com/kramerdj/rkb/releases/latest/download/RKB-Collection-Manager-Mac.zip">Descargar para Mac</a>
+      <a class="boton tinta" data-so="windows" href="https://github.com/kramerdj/rkb/releases/latest/download/RKB-Collection-Manager-Windows.zip">Descargar para Windows</a>
+      <button class="boton tinta" type="button" data-compartir hidden>Mandarme el link a la compu</button>
+    </div>
+    <p class="requisitos" data-nota-so>Para Rekordbox 6 y 7. Mac con chip Apple (M1 o más nuevo) o Windows 10 y 11.</p>
+    <p class="estado" role="status" aria-live="polite" data-estado></p>
+  </div>
+
+  <div class="hero-pantalla">
+    <div class="pantalla app" role="img" aria-label="La app en la vista Colección: menú con los cinco pasos, reproductor, botones de Momento y la tabla de temas con BPM, tono, década, origen y veces tocado.">
+      <div class="app-menu">
+        <div class="app-marca">
+          <svg width="30" height="30" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg>
+          <div><b>RKB</b><small>Collection Manager</small></div>
+        </div>
+        <div class="app-items">
+          <span>1 · Lista de temas</span>
+          <span>2 · Descargas <em>4</em></span>
+          <span>3 · Incorporar</span>
+          <span>4 · My Tags</span>
+          <span class="act">5 · Colección</span>
+          <hr>
+          <span>Eventos tocados</span>
+          <span>Backup y restauración</span>
+          <span>Ajustes e historial</span>
+        </div>
+        <div class="app-estado"><i></i>Rekordbox cerrado</div>
+      </div>
+      <div class="app-vista">
+        <div class="app-cab">
+          <div><small>Paso 5</small><strong>Colección</strong></div>
+          <div class="app-botones"><span>Ordenar nombres</span><span>Buscar duplicados</span><span>Traer cambios de Rekordbox</span><span class="prim">Sincronizar</span></div>
+        </div>
+        <div class="app-player">
+          <span class="play">❚❚</span>
+          <div class="ahora"><b>One More Time</b><span>Daft Punk · 123 BPM · House</span></div>
+          <div class="progreso"><div></div></div>
+          <span class="tiempo">1:52 / 5:20</span>
+        </div>
+        <div class="app-momentos">
+          <span class="lbl">Momento:</span>
+          <span class="mom-b"><kbd>1</kbd>Previa</span><span class="mom-b"><kbd>2</kbd>Warm Up</span><span class="mom-b"><kbd>3</kbd>Main</span><span class="mom-b sel"><kbd>4</kbd>Peak</span><span class="mom-b">Close</span><span class="mom-b">Lentos</span>
+        </div>
+        <div class="app-tabla">
+          <div class="fila enc"><span></span><span>Tema</span><span>Artista</span><span>Género</span><span>BPM</span><span>Tono</span><span>Década</span><span>Origen</span><span>Tocado</span><span>Momento</span></div>
+          <div class="fila"><span></span><span class="t">De Música Ligera</span><span class="a">Soda Stereo</span><span class="g">Rock nacional</span><span>127</span><span>10A</span><span>90s</span><span class="g">Argentina · Español</span><span class="toc">41</span><span><b class="mom">Close</b></span></div>
+          <div class="fila sel"><span class="ico">▶</span><span class="t">One More Time</span><span class="a">Daft Punk</span><span class="g">House</span><span>123</span><span>10B</span><span>2000s</span><span class="g">Europa · Inglés</span><span class="toc">36</span><span><b class="mom">Peak</b></span></div>
+          <div class="fila"><span></span><span class="t">Don't Start Now</span><span class="a">Dua Lipa</span><span class="g">Pop</span><span>124</span><span>10A</span><span>2020s</span><span class="g">Inglaterra · Inglés</span><span class="toc">28</span><span><b class="mom">Main</b></span></div>
+          <div class="fila"><span></span><span class="t">Billie Jean</span><span class="a">Michael Jackson</span><span class="g">Pop</span><span>117</span><span>11A</span><span>80s</span><span class="g">Estados Unidos · Inglés</span><span class="toc">52</span><span><b class="mom">Main</b></span></div>
+          <div class="fila"><span></span><span class="t">September</span><span class="a">Earth, Wind &amp; Fire</span><span class="g">Disco</span><span>126</span><span>11B</span><span>70s</span><span class="g">Estados Unidos · Inglés</span><span class="toc">47</span><span><b class="mom">Warm Up</b></span></div>
+          <div class="fila"><span></span><span class="t">Despacito</span><span class="a">Luis Fonsi, Daddy Yankee</span><span class="g">Pop latino</span><span>89</span><span>10A</span><span>2010s</span><span class="g">Latinoamérica · Español</span><span class="toc">33</span><span><b class="mom">Main</b></span></div>
+          <div class="fila"><span></span><span class="t">Dancing Queen</span><span class="a">ABBA</span><span class="g">Disco</span><span>101</span><span>11B</span><span>70s</span><span class="g">Europa · Inglés</span><span class="toc">39</span><span><b class="mom">Warm Up</b></span></div>
+          <div class="fila"><span></span><span class="t">Don't Stop Me Now</span><span class="a">Queen</span><span class="g">Rock</span><span>156</span><span>7B</span><span>70s</span><span class="g">Inglaterra · Inglés</span><span class="toc">44</span><span><b class="mom">Peak</b></span></div>
+          <div class="fila"><span></span><span class="t">Feel So Close</span><span class="a">Calvin Harris</span><span class="g">House</span><span>128</span><span>9B</span><span>2010s</span><span class="g">Inglaterra · Inglés</span><span class="toc">22</span><span><b class="mom">Peak</b></span></div>
+          <div class="fila"><span></span><span class="t">Get Lucky</span><span class="a">Daft Punk, Pharrell Williams</span><span class="g">Funk</span><span>116</span><span>11A</span><span>2010s</span><span class="g">Europa · Inglés</span><span class="toc cero">—</span><span><b class="mom vacio">—</b></span></div>
+          <div class="fila"><span></span><span class="t">Blinding Lights</span><span class="a">The Weeknd</span><span class="g">Pop</span><span>171</span><span>4A</span><span>2010s</span><span class="g">Norteamérica · Inglés</span><span class="toc">19</span><span><b class="mom">Peak</b></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="estrobo" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+</header>
+
+<main>
+<section class="pasos" id="que-hace">
+  <div class="envoltura">
+    <div class="intro">
+      <h2>De la lista del cliente al último chequeo.</h2>
+      <p>La app sigue el mismo orden en que preparo una fecha. Son cinco pasos, y cada uno te deja listo el siguiente.</p>
+    </div>
+
+    <ol class="cadena">
+      <li class="paso">
+        <div class="paso-texto">
+          <span class="numero" aria-hidden="true">1</span>
+          <h3>Lista de temas</h3>
+          <p>Pegás la lista que te mandó el cliente, o el link de su playlist de Spotify, YouTube Music o Deezer. La app la cruza con tu colección y te dice qué tenés y qué falta bajar, con links de búsqueda en Beatsource, Beatport, iTunes y Bandcamp.</p>
+        </div>
+        <div class="pantalla frag" role="img" aria-label="Ejemplo del paso 1: una lista de 45 temas comparada con la colección. 36 ya están, 2 son posibles coincidencias y 7 faltan.">
+          <div class="frag-cab"><strong>Casamiento Sofi y Tomi</strong><span>45 temas</span></div>
+          <div class="frag-tabs"><span class="sel">Todos 45</span><span>Tengo 36</span><span>Posibles 2</span><span>Faltan 7</span></div>
+          <div class="frag-fila"><span>Soda Stereo - De música ligera</span><b class="chip tengo">Tengo</b></div>
+          <div class="frag-fila"><span>Bad Bunny - Tití me preguntó<small>Beatsource · Beatport · iTunes · Bandcamp</small></span><b class="chip falta">Falta</b></div>
+          <div class="frag-fila"><span>Daft Punk - One More Time</span><b class="chip tengo">Tengo</b></div>
+          <div class="frag-fila"><span>Queen - Don't Stop Me Now<small>En tu colección: Remastered 2011</small></span><b class="chip posible">Posible</b></div>
+          <div class="frag-fila"><span>Karol G - Provenza<small>Beatsource · Beatport · iTunes · Bandcamp</small></span><b class="chip falta">Falta</b></div>
+          <div class="frag-fila"><span>ABBA - Dancing Queen</span><b class="chip tengo">Tengo</b></div>
+        </div>
+      </li>
+
+      <li class="paso">
+        <div class="paso-texto">
+          <span class="numero" aria-hidden="true">2</span>
+          <h3>Descargas</h3>
+          <p>Bajaste lo que faltaba. La app completa metadata y carátulas, marca los duplicados y mide la calidad real del audio mirando el espectro. Un archivo de 320 kbps que corta en 16 kHz no es un 320.</p>
+        </div>
+        <div class="pantalla frag" role="img" aria-label="Ejemplo del paso 2: cuatro descargas con su frecuencia de corte. Dos están bien, una es dudosa en 18,2 kHz y una es mala: dice 320 kbps pero corta en 16 kHz.">
+          <div class="frag-cab"><strong>Descargas</strong><span>4 temas nuevos</span></div>
+          <div class="cal-fila"><span>Bad Bunny - Tití Me Preguntó.mp3</span><div class="espectro" style="--corte:20.5"></div><small>20,5 kHz · 320 kbps</small><b class="chip tengo">OK</b></div>
+          <div class="cal-fila"><span>Karol G - Provenza.mp3</span><div class="espectro" style="--corte:16"></div><small>16,0 kHz · 320 kbps</small><b class="chip falta">MALO</b></div>
+          <div class="cal-fila"><span>Bizarrap, Shakira - Vol. 53.mp3</span><div class="espectro" style="--corte:18.2"></div><small>18,2 kHz · 256 kbps</small><b class="chip posible">DUDOSO</b></div>
+          <div class="cal-fila"><span>Emilia - La_Original.mp3</span><div class="espectro" style="--corte:20.1"></div><small>20,1 kHz · 320 kbps</small><b class="chip tengo">OK</b></div>
+          <p class="frag-nota">Calidad: OK ≥ 19 kHz · Dudoso 17,5–19 · Malo &lt; 17,5.</p>
+        </div>
+      </li>
+
+      <li class="paso">
+        <div class="paso-texto">
+          <span class="numero" aria-hidden="true">3</span>
+          <h3>Incorporar</h3>
+          <p>Mueve los temas a tu colección sin pisar nada, los agrega a Rekordbox con su metadata y sus My Tags, y arma la playlist del evento. Antes de salir a tocar, el chequeo te muestra si en esa playlist quedó algo de mala calidad.</p>
+        </div>
+        <div class="pantalla frag" role="img" aria-label="Ejemplo del paso 3: backup de la base hecho, archivos movidos a la colección y temas agregados a Rekordbox. El chequeo del evento muestra 45 temas, ninguno malo y uno dudoso.">
+          <div class="frag-cab"><strong>Incorporar a la colección</strong><span>7 temas preparados</span></div>
+          <ol class="hechos">
+            <li>Backup de la base de Rekordbox.</li>
+            <li>Mueve los archivos a la carpeta de la colección (sin pisar nada).</li>
+            <li>Los agrega a Rekordbox con su metadata y sus My Tags automáticos.</li>
+          </ol>
+          <div class="frag-cab sub"><strong>Chequeo antes del evento</strong><span>Casamiento Sofi y Tomi</span></div>
+          <div class="frag-fila"><span>45 temas en la playlist</span><b class="chip posible">calidad: 0 malos · 1 dudosos</b></div>
+        </div>
+      </li>
+
+      <li class="paso">
+        <div class="paso-texto">
+          <span class="numero" aria-hidden="true">4</span>
+          <h3>My Tags</h3>
+          <p>Rekordbox te da cuatro categorías de My Tags. La app llena tres sola desde la metadata (origen e idioma, género, década) y te deja una manual para lo que sólo vos sabés: en qué momento de la noche va cada tema.</p>
+        </div>
+        <div class="pantalla frag" role="img" aria-label="Ejemplo del paso 4: las cuatro categorías de My Tags. Origen e idioma, género y década son automáticas; Momento es manual, con Previa, Warm Up, Main, Peak, Close y Lentos.">
+          <div class="cats">
+            <div><strong>Origen/Idioma</strong><small>Automático</small><p><span>Argentina</span><span>Latinoamérica</span><span>Inglaterra</span><span>Español</span><span>Inglés</span></p></div>
+            <div><strong>Género</strong><small>Automático</small><p><span>Cumbia</span><span>Rock nacional</span><span>Pop</span><span>House</span><span>Disco</span></p></div>
+            <div><strong>Década</strong><small>Automático</small><p><span>70s</span><span>80s</span><span>90s</span><span>2000s</span><span>2010s</span><span>2020s</span></p></div>
+            <div><strong>Momento</strong><small>Manual</small><p><span>Previa</span><span>Warm Up</span><span>Main</span><span class="sel">Peak</span><span>Close</span><span>Lentos</span></p></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="paso">
+        <div class="paso-texto">
+          <span class="numero" aria-hidden="true">5</span>
+          <h3>Colección</h3>
+          <p>Tu biblioteca entera con reproductor. Editás metadata de a un tema o de a cientos, marcás el Momento con una tecla mientras escuchás y, cuando elegís un tema, te sugiere cuáles siguen bien por tono y BPM.</p>
+        </div>
+        <div class="pantalla frag" role="img" aria-label="Ejemplo del paso 5: para One More Time de Daft Punk, 123 BPM en 10B, la app sugiere cuatro temas que siguen bien, con tono compatible y BPM dentro del 6 por ciento.">
+          <div class="frag-cab"><strong>One More Time</strong><span>Daft Punk · 123 BPM · 10B</span></div>
+          <div class="frag-tabs"><span>mismo género</span><span class="sel">tono compatible</span><span class="sel">BPM ± 6 %</span></div>
+          <div class="frag-cab sub"><strong>Siguen bien</strong><span>4</span></div>
+          <div class="sg-fila"><span>September<small>Earth, Wind &amp; Fire</small></span><i>126</i><i>11B</i></div>
+          <div class="sg-fila"><span>Feel So Close<small>Calvin Harris</small></span><i>128</i><i>9B</i></div>
+          <div class="sg-fila"><span>Don't Start Now<small>Dua Lipa</small></span><i>124</i><i>10A</i></div>
+          <div class="sg-fila"><span>De Música Ligera<small>Soda Stereo</small></span><i>127</i><i>10A</i></div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="ademas">
+      <h3>Y fuera de los cinco pasos</h3>
+      <dl>
+        <div><dt>Eventos tocados</dt><dd>Qué pasaste en cada fecha, según el historial de Rekordbox, y qué temas no tocaste nunca.</dd></div>
+        <div><dt>Duplicados</dt><dd>Encuentra las copias del mismo tema y te muestra cues, playlists y calidad de cada una para elegir cuál queda.</dd></div>
+        <div><dt>Nombres prolijos</dt><dd>Ordena los nombres de archivo de toda la colección con un mismo criterio.</dd></div>
+        <div><dt>Backup y restauración</dt><dd>Copia completa de la base y de tu música, pensada para un disco externo o para mudarte de computadora.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="confianza" id="confianza">
+  <div class="envoltura dos">
+    <div class="intro">
+      <h2>Qué le hace a tu biblioteca, y qué no.</h2>
+      <p>Una colección lleva años. Antes de bajar nada, esto es lo que tenés que saber.</p>
+    </div>
+    <ul class="garantias">
+      <li><h3>Hace un backup antes de cada cambio</h3><p>Cada operación guarda su copia de la base de Rekordbox, y casi todo se puede deshacer desde el historial.</p></li>
+      <li><h3>Nada sale de tu computadora</h3><p>Tu música, tus archivos y tu base se quedan con vos. La app sale a internet sólo para buscar metadata y carátulas, leer las playlists que le pasás y avisarte si hay una versión nueva.</p></li>
+      <li><h3>Guarda con Rekordbox cerrado</h3><p>Para escribir en la base, Rekordbox tiene que estar cerrado. La app te avisa si lo dejaste abierto.</p></li>
+      <li><h3>El código está a la vista</h3><p>Es software libre, bajo licencia GPL-3.0. Cualquiera puede revisar qué hace y cómo. <a href="https://github.com/kramerdj/rkb">Ver el código</a></p></li>
+      <li class="aviso"><h3>Es una beta</h3><p>Se usa bajo tu propia responsabilidad. Antes de empezar, hacé tu propio backup en Rekordbox: Archivo → Biblioteca → Hacer copia de seguridad.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="instalar" id="instalar">
+  <div class="envoltura">
+    <div class="intro">
+      <h2>Se instala en dos minutos. El primer arranque tiene un truco.</h2>
+      <p>La app es gratuita y todavía no está registrada en Apple ni en Microsoft, así que el sistema la frena la primera vez que la abrís. Es un solo aviso, y se pasa así.</p>
+    </div>
+
+    <div class="sistemas" data-sistemas>
+      <div class="pestanas" role="tablist" aria-label="Sistema operativo" hidden>
+        <button type="button" role="tab" id="tab-mac" aria-controls="instalar-mac" aria-selected="true">Mac</button>
+        <button type="button" role="tab" id="tab-windows" aria-controls="instalar-windows" aria-selected="false" tabindex="-1">Windows</button>
+      </div>
+
+      <div class="sistema" id="instalar-mac" role="tabpanel" aria-labelledby="tab-mac">
+        <div class="sistema-cab">
+          <h3>En Mac</h3>
+          <p>Chip Apple (M1 o más nuevo), macOS 12 o posterior. <span class="peso">49 MB</span></p>
+          <a class="boton" href="https://github.com/kramerdj/rkb/releases/latest/download/RKB-Collection-Manager-Mac.zip">Descargar para Mac</a>
+        </div>
+        <ol class="procedimiento">
+          <li><h4>Descomprimí y arrastrá</h4><p>Doble clic en el zip, y arrastrá «RKB Collection Manager» a la carpeta Aplicaciones.</p></li>
+          <li><h4>Abrila y tocá «Listo»</h4><p>Va a aparecer un aviso de que macOS no la pudo verificar. Es el aviso esperado: tocá «Listo».</p></li>
+          <li><h4>Tocá «Abrir igualmente»</h4><p>Andá a Ajustes del Sistema → Privacidad y seguridad y bajá hasta el final. Donde dice que se bloqueó RKB Collection Manager, tocá «Abrir igualmente» y confirmá con tu contraseña o Touch ID.</p></li>
+          <li><h4>Dale permiso para leer tu música</h4><p>En Privacidad y seguridad → Acceso total al disco, activá «RKB Collection Manager». Cerrá la app y volvé a abrirla. Sin este permiso no se ven las carátulas ni suena el reproductor.</p></li>
+        </ol>
+      </div>
+
+      <div class="sistema" id="instalar-windows" role="tabpanel" aria-labelledby="tab-windows">
+        <div class="sistema-cab">
+          <h3>En Windows</h3>
+          <p>Windows 10 u 11 de 64 bits.</p>
+          <a class="boton" href="https://github.com/kramerdj/rkb/releases/latest/download/RKB-Collection-Manager-Windows.zip">Descargar para Windows</a>
+        </div>
+        <ol class="procedimiento">
+          <li><h4>Descomprimí el zip</h4><p>Clic derecho → Extraer todo, y guardá «RKB Collection Manager.exe» donde quieras. Es un solo archivo: no instala nada más.</p></li>
+          <li><h4>Abrila y tocá «Más información»</h4><p>Si aparece «Windows protegió su PC», tocá «Más información» y después «Ejecutar de todas formas».</p></li>
+          <li><h4>Si el antivirus pregunta, permitila</h4><p>La primera vez tarda unos segundos más en abrir. Es normal.</p></li>
+          <li><h4>¿La ventana sale en blanco?</h4><p>Instalá «Microsoft Edge WebView2 Runtime», que es gratis y se baja de microsoft.com. Windows 11 ya lo trae.</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="despues">Al abrirla por primera vez, la app te pide la carpeta donde tenés tu música y te sugiere una según tu Rekordbox.</p>
+  </div>
+</section>
+
+<section class="contame" id="contame">
+  <div class="envoltura dos">
+    <div class="intro">
+      <h2>Probala en tu colección y contame.</h2>
+    </div>
+    <div class="contame-texto">
+      <p>Estoy juntando opiniones de colegas antes de abrirla a más gente. Lo que no entendiste, lo que te falta, lo que se rompió: todo sirve.</p>
+      <a class="boton" data-whatsapp hidden>Escribime por WhatsApp</a>
+      <p class="chica">Si algo falla, en la app andá a Acerca de → «Reportar un problema». Te arma un archivo en Descargas para que me lo mandes. No incluye tu música ni tu base de Rekordbox.</p>
+    </div>
+  </div>
+</section>
+
+<section class="preguntas" id="preguntas">
+  <div class="envoltura dos">
+    <div class="intro">
+      <h2>Preguntas que ya me hicieron.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿Es gratis?</summary><p>Sí. Esta beta es gratis y el código es libre.</p></details>
+      <details><summary>¿Me puede romper la colección?</summary><p>La app hace un backup antes de cada cambio y casi todo se puede deshacer. Igual es una beta: hacé tu propia copia de seguridad en Rekordbox antes de empezar.</p></details>
+      <details><summary>¿Por qué la compu dice que no es segura?</summary><p>Porque todavía no está firmada con Apple ni con Microsoft. No quiere decir que tenga un problema: quiere decir que el sistema no conoce al que la hizo. En <a href="#instalar">Instalación</a> están los pasos para abrirla igual.</p></details>
+      <details><summary>¿Anda en Macs con Intel?</summary><p>Por ahora no: sólo en Macs con chip Apple (M1 o más nuevo). Si tenés una Intel, avisame, así sé cuánta gente la necesita.</p></details>
+      <details><summary>¿Qué versión de Rekordbox necesito?</summary><p>Rekordbox 6 o 7.</p></details>
+      <details><summary>¿Necesita internet?</summary><p>Sólo para buscar metadata y carátulas y para leer playlists de Spotify, YouTube Music o Deezer. Todo lo demás funciona sin conexión.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie-marca">
+      <svg width="44" height="44" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg>
+      <p><b>RKB Collection Manager</b><br>Versión <span data-version>0.8</span> beta</p>
+    </div>
+    <p>Hecha por Guido · KRAMER DJ: idea, criterios y diseño de la herramienta. Programada con la asistencia de Claude, el asistente de IA de Anthropic.</p>
+    <p>Software libre bajo la GNU GPL versión 3 o posterior. Se distribuye sin garantía de ningún tipo. <a href="https://github.com/kramerdj/rkb">Código fuente</a></p>
+    <p class="legal">Rekordbox es una marca de AlphaTheta Corporation. Spotify, YouTube, Apple, iTunes y Deezer son marcas de sus respectivos dueños. Esta app es independiente: no está afiliada, patrocinada ni respaldada por ninguna de esas empresas.</p>
+  </div>
+</footer>
+</body>
+</html>
