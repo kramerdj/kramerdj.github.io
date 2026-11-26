@@ -1,4 +1,4 @@
-const VERSION = "0.9";              // se usa si no se puede consultar GitHub
+const VERSION = "0.9.1";              // se usa si no se puede consultar GitHub
 const WHATSAPP = "5491141800651";
 
 const ua = navigator.userAgent;
