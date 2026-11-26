@@ -1,5 +1,5 @@
-const VERSION = "0.8";
-const WHATSAPP = "";
+const VERSION = "0.9";              // se usa si no se puede consultar GitHub
+const WHATSAPP = "5491141800651";
 
 const ua = navigator.userAgent;
 const movil = /Android|iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
@@ -68,3 +68,18 @@ if (WHATSAPP) {
   boton.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola Guido, probé RKB Collection Manager.")}`;
   boton.hidden = false;
 }
+
+// La versión y el peso de las descargas salen de la última versión publicada en GitHub,
+// así la página se actualiza sola cada vez que se publica una versión nueva.
+fetch("https://api.github.com/repos/kramerdj/rkb/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
+  .then((r) => (r.ok ? r.json() : null))
+  .then((rel) => {
+    if (!rel || !rel.tag_name) return;
+    const version = rel.tag_name.replace(/^v/, "");
+    for (const el of document.querySelectorAll("[data-version]")) el.textContent = version;
+    for (const el of document.querySelectorAll("[data-peso]")) {
+      const archivo = (rel.assets || []).find((a) => a.name === `RKB-Collection-Manager-${el.dataset.peso}.zip`);
+      if (archivo) el.textContent = `${Math.round(archivo.size / 1e6)} MB`;
+    }
+  })
+  .catch(() => {});
