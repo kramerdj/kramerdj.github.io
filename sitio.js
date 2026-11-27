@@ -83,3 +83,12 @@ fetch("https://api.github.com/repos/kramerdj/rkb/releases/latest", { headers: { 
     }
   })
   .catch(() => {});
+
+// Al cambiar de pestaña (Mac / Windows), que arranque la animación de la que se ve.
+for (const tab of document.querySelectorAll('[role="tab"]')) {
+  tab.addEventListener("click", () => setTimeout(() => {
+    for (const v of document.querySelectorAll("video.tutorial")) {
+      if (v.offsetParent) v.play().catch(() => {});
+    }
+  }, 50));
+}
